@@ -33,24 +33,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div
-          className={cn(
-            "relative min-h-screen bg-background font-sans antialiased",
-            fontSans.variable,
-          )}
-        >
-          <JotaiProvider>
-            <ThemeProvider>
-              <ConvexClientProvider>
+        <JotaiProvider>
+          <ThemeProvider>
+            <ConvexClientProvider>
+              <div
+                className={cn(
+                  "relative min-h-screen bg-background font-sans antialiased",
+                  fontSans.variable,
+                )}
+              >
                 <div className="pb-36">
                   <Header />
                   <div className="container mb-36 pt-6">{children}</div>
                 </div>
                 <Footer />
-              </ConvexClientProvider>
-            </ThemeProvider>
-          </JotaiProvider>
-        </div>
+              </div>
+            </ConvexClientProvider>
+          </ThemeProvider>
+        </JotaiProvider>
       </body>
     </html>
   );
